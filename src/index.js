@@ -4,6 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const list_index_styles = ['uikit-rtl.css', 'uikit.css'];
+const list_index_styles_min = ['uikit-rtl.min.css', 'uikit.min.css'];
+const list_index_js = ['uikit-icons.js', 'uikit.js']
+const list_index_js_min = ['uikit-icons.min.js', 'uikit.min.js']
+
+// Import index styles
+list_index_styles.forEach((index_style) => {
+  import ("".concat('./css/', index_style));
+})
+
+// Import index styles
+list_index_js.forEach((index_js) => {
+  import ("".concat('./js/', index_js));
+})
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -11,7 +26,4 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
